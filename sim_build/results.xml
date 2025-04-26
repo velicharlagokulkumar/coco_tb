@@ -1,0 +1,9 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1745665734" />
+    <testcase name="my_first_test" classname="test_my_design" file="/home/wisig/Videos/gokul/coco_tb/test_my_design.py" lineno="5" time="0.0006976127624511719" sim_time_ns="21.0" ratio_time="30102.66028708134" />
+    <testcase name="my_second_test" classname="test_my_design" file="/home/wisig/Videos/gokul/coco_tb/test_my_design.py" lineno="35" time="0.00031447410583496094" sim_time_ns="7.0" ratio_time="22259.38438210766">
+      <failure message="Test failed with RANDOM_SEED=1745665734" />
+    </testcase>
+  </testsuite>
+</testsuites>
