@@ -9,3 +9,4 @@
 ```
 source setup_cocotb.sh
 ```
+![image](https://github.com/user-attachments/assets/b549ec51-1e83-4197-9aae-2556ca524553)
