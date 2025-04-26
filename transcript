@@ -1,0 +1,71 @@
+# do sim_build/runsim.do
+# QuestaSim-64 vmap 2021.4_2 Lib Mapping Utility 2021.12 Dec  4 2021
+# vmap -c 
+# ** Warning: vmap will not overwrite local modelsim.ini.
+# QuestaSim-64 vmap 2021.4_2 Lib Mapping Utility 2021.12 Dec  4 2021
+# vmap work sim_build/work 
+# Modifying modelsim.ini
+# QuestaSim-64 vlog 2021.4_2 Compiler 2021.12 Dec  4 2021
+# Start time: 14:33:48 on Apr 26,2025
+# vlog -work work "+define+COCOTB_SIM" -sv -timescale 1ns/1ps -mfcu "+acc" /home/wisig/Videos/gokul/coco_tb/my_design.sv 
+# -- Compiling module my_design
+# 
+# Top level modules:
+# 	my_design
+# End time: 14:33:48 on Apr 26,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -onfinish exit -pli "/home/wisig/Videos/gokul/coco_tb/cocotb-venv/lib/python3.12/site-packages/cocotb/libs/libcocotbvpi_modelsim.so" work.my_design 
+# Start time: 14:33:48 on Apr 26,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vsim-3865) Due to PLI being present, global +acc is being enabled automatically. This will cause your simulation to run very slowly. Please use vsim -no_autoacc to disable this feature. This feature is now deprecated and will be removed from future releases.
+# //  Questa Sim-64
+# //  Version 2021.4_2 linux_x86_64 Dec  4 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.my_design(fast)
+# Loading /home/wisig/Videos/gokul/coco_tb/cocotb-venv/lib/python3.12/site-packages/cocotb/libs/libcocotbvpi_modelsim.so
+#      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:108  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/wisig/Videos/gokul/coco_tb/cocotb-venv/bin/python
+#      -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+#      0.00ns INFO     cocotb                             Running on ModelSim for Questa-64 version 2021.4_2 2021.12
+#      0.00ns INFO     cocotb                             Running tests with cocotb v1.9.2 from /home/wisig/Videos/gokul/coco_tb/cocotb-venv/lib/python3.12/site-packages/cocotb
+#      0.00ns INFO     cocotb                             Seeding Python random module with 1745658228
+#      0.00ns INFO     cocotb.regression                  pytest not found, install it to enable better AssertionError messages
+#      0.00ns INFO     cocotb.regression                  Found test test_my_design.my_first_test
+#      0.00ns INFO     cocotb.regression                  Found test test_my_design.my_second_test
+#      0.00ns INFO     cocotb.regression                  running my_first_test (1/2)
+#                                                           Try accessing the design.
+#     20.00ns INFO     cocotb.my_design                   my_signal_1 is 1
+#     21.00ns INFO     cocotb.regression                  my_first_test passed
+#     21.00ns INFO     cocotb.regression                  running my_second_test (2/2)
+#                                                           Try accessing the design.
+#     27.00ns INFO     cocotb.my_design                   my_signal_1 is 1
+#     28.00ns INFO     cocotb.regression                  my_second_test failed
+#                                                         Traceback (most recent call last):
+#                                                           File "/home/wisig/Videos/gokul/coco_tb/test_my_design.py", line 45, in my_second_test
+#                                                             assert dut.my_signal_2.value[0] == 1, "my_signal_2[0] is not 1!"
+#                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#                                                         AssertionError: my_signal_2[0] is not 1!
+#     28.00ns INFO     cocotb.regression                  ***************************************************************************************
+#                                                         ** TEST                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+#                                                         ***************************************************************************************
+#                                                         ** test_my_design.my_first_test    PASS          21.00           0.00      29888.15  **
+#                                                         ** test_my_design.my_second_test   FAIL           7.00           0.00      22141.88  **
+#                                                         ***************************************************************************************
+#                                                         ** TESTS=2 PASS=1 FAIL=1 SKIP=0                  28.00           0.00      13665.41  **
+#                                                         ***************************************************************************************
+#                                                         
+# ** Note: $finish
+#    Time: 28 ns  Iteration: 0  Instance: /my_design
+# End time: 14:33:48 on Apr 26,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
