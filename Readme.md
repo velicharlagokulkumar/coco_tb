@@ -9,4 +9,8 @@
 ```
 source setup_cocotb.sh
 ```
+```
+export MTI_VCO_MODE=64
+python3 test_runner.py
+```
 ![image](https://github.com/user-attachments/assets/b549ec51-1e83-4197-9aae-2556ca524553)
